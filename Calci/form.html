@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+
+
+
+    <script>
+        function validate() {
+
+            var box1 = document.getElementById("hide").style.display = "none";
+            var box2 = document.getElementById("subarts").style.display = "none";
+            var box3 = document.getElementById("Edu").style.display = "none";
+            var box4 = document.getElementById("engradio").style.display = "none";
+            var box4 = document.getElementById("subeng").style.display = "none";
+            //-------------------------------------Male education hide-----------------------//
+            var boxes1 = document.getElementById("hideage").style.display = "block";
+            var boxes2 = document.getElementById("age").style.display = "block";
+            var boxes3 = document.getElementById("hideadd").style.display = "block";
+            var boxes4 = document.getElementById("address").style.display = "block";
+
+        }
+
+        function validates() {
+
+            var box1 = document.getElementById("hide").style.display = "block";
+            var box2 = document.getElementById("subarts").style.display = "block";
+            var box3 = document.getElementById("Edu").style.display = "block";
+            var box4 = document.getElementById("engradio").style.display = "block";
+            var box4 = document.getElementById("subeng").style.display = "block";
+            //------------------------------Female education show------------------------------//
+
+            var boxes1 = document.getElementById("hideage").style.display = "none";
+            var boxes2 = document.getElementById("age").style.display = "none";
+            var boxes3 = document.getElementById("hideadd").style.display = "none";
+            var boxes4 = document.getElementById("address").style.display = "none";
+
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <div class="form1"> Name:<br> <input type="text" id="name"><br><br> email: <br>
+
+
+        <input type="text" id="email"><br><br> mobile number:<br> <input type="text" id="mobile"><br><br> Gender: <br><br> Male <input type="radio" name="gen" id="male" checked onclick="validate()"> Female <input type="radio" name="gen" id="female" onclick="validates()"><br><br>
+
+
+        <label id="hideage">  Age:</label>
+
+
+        <input type="text" id="age" autocomplete="none"><br><br>
+
+
+        <label id="hideadd">Address:</label>
+
+        <input type="text" id="address" autocomplete="nope"><br><br>
+
+        <label id="hide">Education:</label><br>
+
+
+        <label for="arts" id="subarts">Arts</label>
+
+        <input type="radio" name="arts" id="Edu">
+
+
+        <label for="edu" id="subeng">Engineering</label>
+
+        <input type="radio" name="arts" id="engradio"><br> College:
+
+
+        <br>
+        <input type="text" id="College"><br><br>
+
+        <input type="button" value="Register">
+    </div>
+
+
+</body>
+
+</html>

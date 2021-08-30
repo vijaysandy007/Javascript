@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var x = 50;
+        var y = 80;
+        var z = x + y;
+
+        alert(z);
+    </script>
+
+    <h1>Replace Methods</h1>
+    String: <span id="res1"></span><br><br> Find: <input type="text" id="find"><br><br> Replace: <input type="text" id="replace"><br><br>
+    <input type="button" value="Replace" onclick="replaceData()"><br><br> Output: <span id="res2"></span>
+
+    <script>
+        var inputString = "username:vijay, phone:9841527933, email:vijay@gmail.com";
+        var inputString1 = "hello vijay, h r u Vijay? ";
+
+        document.getElementById("res1").innerHTML = inputString;
+        document.getElementById("res2").innerHTML = inputString1;
+
+        function getData() {
+
+            var index1 = inputString.indexOf('vijay');
+            var input1 = inputString.slice(index1, 13);
+            var index2 = inputString.indexOf('9841527933');
+            var input2 = inputString.indexOf(index2, 29);
+            var index3 = inputString.indexOf('vijay@');
+            var input3 = inputString.indexOf(index3);
+            document.getElementById("username").value = input1;
+            document.getElementById("phoneno").value = input2;
+            document.getElementById("emailid").value = input3;
+
+        }
+
+        function replaceData() {
+
+            var input4, input5, replace;
+            input4 = document.getElementById("find").value;
+            var regex = new RegExp(input4, "gi");
+            input5 = document.getElementById("replace").value;
+            replace = inputString1.replace(regex, input5);
+            document.getElementById("res2").innerHTML = replace;
+
+        }
+    </script>
+</body>
+
+</html>

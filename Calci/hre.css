@@ -1,0 +1,44 @@
+body{
+
+background-image: url("background.png");
+
+}
+
+.form{
+
+position: relative;
+left: 650px;
+font-size: 25px;
+color: white;
+}
+
+.form1{
+
+position: relative;
+left: 650px;
+font-size: 25px;
+color: white;
+}
+
+h1{
+
+font-size: 40px;
+letter-spacing: 2px;
+text-transform: capitalize;
+color: rgb(240, 230, 101);
+
+}
+
+#num1{
+
+font-size: 18px;
+color: black;
+font-weight: bold;
+
+}
+#num2{
+
+    font-size: 18px;
+    color: black;
+font-weight: bold;
+    }

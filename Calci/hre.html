@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case sensitive & insensitive</title>
+    <link rel="stylesheet" href="hre.css">
+    <script>
+        var usernames = "manoj, vijay , kishore"; //global variable.
+
+        function validation1() { // case sensitive
+            var box1
+            var out
+
+            box1 = document.getElementById("num1").value;
+            out = document.getElementById("p1");
+
+            if (usernames.indexOf(box1) >= 0) {
+
+                var exit = "not available";
+                out.style.color = "red";
+
+            }
+
+            if (box1 == "") {
+
+                exit = "Type to check";
+                out.style.color = "red";
+
+            } else {
+
+                var exit = "available";
+                out.style.color = "green";
+
+            }
+            out.innerHTML = exit;
+
+        }
+
+        function validation2() { // case insensitive.
+
+
+
+            var box2
+            var ou2
+            box2 = document.getElementById("num2").value;
+            var regex = new RegExp(box2, "i");
+            out = document.getElementById("p2");
+
+            if (usernames.search(regex) >= 0) {
+
+                var exit1 = "not availabe";
+                out.style.color = "red";
+
+            }
+            if (box2 == "") {
+
+                exit1 = "Type to check";
+                out.style.color = "red";
+
+            } else {
+
+                var exit1 = "available";
+                out.style.color = "green";
+
+            }
+
+            out.innerHTML = exit1;
+
+        }
+    </script>
+
+    search
+</head>
+
+<body><br>
+    <div class="form">
+        <h1>Case INsensitive</h1>
+        Username 1: <input type="text" id="num1" placeholder="type here...." onblur="validation1()"><br><br> Available: <span id="p1"> </span><br><br><br><br>
+    </div>
+    <hr>
+
+    <br><br><br>
+    <div class="form1">
+        <h1>Case sensitive</h1>
+        Username 2: <input type="text" id="num2" placeholder="type here...." onblur="validation2()"><br><br> Available: <span id="p2"></span><br><br><br><br>
+    </div>
+    <hr>
+
+
+</body>
+
+
+</html>
